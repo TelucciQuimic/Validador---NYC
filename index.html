@@ -20,7 +20,7 @@
     .top-utils .left-util { display: flex; align-items: center; gap: 6px; }
     .top-utils .chat-icon { color: #8cc63f; font-size: 1rem; }
 
-    /* ── MAIN NAV (Barra Negra 1/8 más alta y Logo dentro) ── */
+    /* ── MAIN NAV (PC) ── */
     .main-nav { background: #111; height: 72px; display: flex; align-items: stretch; padding: 0 40px; }
     
     .logo-modelo-desktop { 
@@ -34,8 +34,7 @@
 
     .main-nav-tabs { display: flex; align-items: stretch; }
     .main-nav-tabs a { color: #fff; text-decoration: none; font-size: 0.9rem; font-weight: 500; display: flex; align-items: center; padding: 0 25px; transition: background .2s; }
-    
-    /* Pestaña Empleadores con Cian Brillante */
+    .main-nav-tabs a:hover { background: #222; }
     .main-nav-tabs a.active { background: #00e5ff; color: #111; font-weight: 700; } 
 
     .main-nav-actions { display: flex; align-items: center; gap: 12px; margin-left: 10px; }
@@ -44,7 +43,7 @@
     .btn-search { background: none; border: none; color: #fff; font-size: 1.1rem; cursor: pointer; padding: 0 8px; }
     .hamburger { display: none; }
 
-    /* ── SUB NAV ── */
+    /* ── SUB NAV (PC) ── */
     .sub-nav { background: #fff; border-bottom: 1px solid #eaeaea; height: 48px; display: flex; align-items: center; padding: 0 40px; gap: 25px; font-size: 0.82rem; }
     .sub-nav a { color: #555; text-decoration: none; font-weight: 500; }
     .sub-nav .access { margin-left: auto; font-weight: 700; color: #333; }
@@ -58,7 +57,7 @@
     .page-title { font-size: 2rem; font-weight: 500; color: #8cc63f; margin-bottom: 16px; letter-spacing: -0.5px; }
     .page-desc { font-size: 0.92rem; color: #555; line-height: 1.6; margin-bottom: 24px; }
     
-    /* ── FORM (Centrado en Web) ── */
+    /* ── FORM (PC: Centrado) ── */
     .form-wrapper { max-width: 600px; margin: 0 auto; }
     .form-row { display: flex; align-items: center; margin-bottom: 18px; gap: 20px; justify-content: center; } 
     .form-row label { font-size: 0.9rem; color: #555; text-align: right; min-width: 200px; }
@@ -76,29 +75,38 @@
     /* Barra Alerta */
     .green-alert { background: #f4f9f1; padding: 10px 20px; color: #333; font-size: 0.88rem; font-weight: 500; margin-bottom: 40px; border-radius: 2px; text-align: center; }
 
-    /* Botón: 2cm abajo (75px) y reducido de alto */
+    /* Botón Web: Posición y Altura */
     .btn-row { display: flex; justify-content: flex-end; margin-top: 75px; max-width: 541px; margin-left: auto; } 
     .btn-validar { background: #f2f2f2; color: #aaa; border: 1px solid #e0e0e0; padding: 4.5px 30px; border-radius: 3px; font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 600; cursor: not-allowed; transition: all .2s; }
     .btn-validar.ready { background: #8cc63f; color: #fff; border-color: #7ab800; cursor: pointer; }
 
+    /* ── FOOTER ── */
+    .footer-main { background: #f9f9f9; padding: 50px 40px; border-top: 1px solid #eee; margin-top: auto; }
+    .footer-inner { max-width: 1000px; margin: 0 auto; }
+    .footer-brand img { height: 40px; object-fit: contain; margin-bottom: 30px; }
+    .footer-sp-bar { background: #000; color: #fff; text-align: center; padding: 12px; font-size: 0.82rem; }
+    .footer-sp-bar a { color: #00b8d4; font-weight: 700; text-decoration: none; }
+
     /* ── MOBILE RESPONSIVE ── */
     @media (max-width: 900px) {
       .logo-modelo-desktop { display: none; }
-      .logo-modelo-mobile { display: block; width: 120px; } 
+      .logo-modelo-mobile { display: block; width: 130px; } 
       .logo-modelo-mobile img { width: 100%; display: block; }
       
       .top-utils { padding: 0 5px; height: 35px; justify-content: flex-start; }
-      .main-nav { background: #8cc63f; height: 60px; padding: 0 5px; justify-content: space-between; align-items: center; }
+      
+      /* Barra superior verde COLOR #81be01 y ALTURA +1/4cm (70px) */
+      .main-nav { background: #81be01; height: 70px; padding: 0 5px; justify-content: space-between; align-items: center; }
       .main-nav-tabs, .btn-outline, .sub-nav { display: none; }
       
-      .main-nav-actions { margin: 0; gap: 8px; }
+      .main-nav-actions { margin: 0; gap: 10px; }
       .btn-solid { background: transparent; border: 1px solid #fff; color: #fff; padding: 5px 10px; }
       .hamburger { display: block; background: none; border: none; cursor: pointer; padding: 0; }
       
       main { padding: 10px 5px 40px; }
       .page-title { color: #8cc63f; font-size: 1.7rem; font-weight: 600; text-align: left; }
       
-      /* Alerta Extremo a Extremo y +1cm Alto */
+      /* Alerta Extremo a Extremo */
       .green-alert { 
         width: 100vw; 
         position: relative; 
@@ -126,11 +134,11 @@
 
   <div class="main-nav">
     <a href="#" class="logo-modelo-desktop">
-      <img src="https://49659256.fs1.hubspotusercontent-na1.net/hubfs/49659256/PDFS/LOGOS%20AFP/LOGO%20MODELO.png" alt="AFP Modelo PC"/>
+      <img src="https://49659256.fs1.hubspotusercontent-na1.net/hubfs/49659256/PDFS/LOGOS%20AFP/LOGO%20MODELO.png" alt="PC"/>
     </a>
 
     <a href="#" class="logo-modelo-mobile">
-      <img src="https://49659256.fs1.hubspotusercontent-na1.net/hubfs/49659256/PDFS/LOGOS%20AFP/LOGO_MODELO_MOBILE.jpeg" alt="AFP Modelo Celular"/>
+      <img src="https://49659256.fs1.hubspotusercontent-na1.net/hubfs/49659256/PDFS/LOGOS%20AFP/LOGO_MODELO_MOBILE.jpeg" alt="Celular"/>
     </a>
 
     <div class="main-nav-tabs">
@@ -186,7 +194,6 @@
 
   <div id="result-box" style="display:none; margin-top:20px;">
     <div id="result-header" style="padding:15px; font-weight:bold;"></div>
-    <div id="result-body" style="padding:15px; background:#fff;"></div>
   </div>
 </main>
 
@@ -195,6 +202,10 @@
     <div class="footer-brand"><img src="https://49659256.fs1.hubspotusercontent-na1.net/hubfs/49659256/PDFS/LOGOS%20AFP/LOGO%20MODELO.png" alt="AFP Modelo"/></div>
     <p class="footer-legal">&copy; 2026 AFP Modelo. Todos los Derechos Reservados.</p>
   </div>
+</div>
+
+<div class="footer-sp-bar">
+  Entrega tu opinión a la <a href="#">SUPERINTENDENCIA DE PENSIONES</a> sobre la calidad de servicio de tu AFP.
 </div>
 
 <script>
