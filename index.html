@@ -16,7 +16,17 @@
     .header-wrapper { position: relative; width: 100%; z-index: 100; }
 
     /* ── TOP UTILS BAR (PC) ── */
-    .top-utils { background: #f9f9f9; border-bottom: 1px solid #eee; padding: 0 40px; height: 40px; display: flex; align-items: center; justify-content: space-between; font-size: 0.82rem; color: #666; }
+    .top-utils { 
+      background: #e6f2cc; /* Color actualizado según solicitud */
+      border-bottom: 1px solid #eee; 
+      padding: 0 40px; 
+      height: 40px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+      font-size: 0.82rem; 
+      color: #666; 
+    }
     .top-utils .left-util { display: flex; align-items: center; gap: 6px; }
     .top-utils .chat-icon { color: #8cc63f; font-size: 1rem; }
 
@@ -35,7 +45,9 @@
     .main-nav-tabs { display: flex; align-items: stretch; }
     .main-nav-tabs a { color: #fff; text-decoration: none; font-size: 0.9rem; font-weight: 500; display: flex; align-items: center; padding: 0 25px; transition: background .2s; }
     .main-nav-tabs a:hover { background: #222; }
-    .main-nav-tabs a.active { background: #00e5ff; color: #111; font-weight: 700; } 
+    
+    /* Pestaña Empleadores con Celeste #8febff */
+    .main-nav-tabs a.active { background: #8febff; color: #111; font-weight: 700; } 
 
     .main-nav-actions { display: flex; align-items: center; gap: 12px; margin-left: 10px; }
     .btn-outline { border: 1px solid #8cc63f; color: #fff; padding: 7px 18px; border-radius: 3px; font-size: 0.82rem; font-weight: 600; text-decoration: none; }
@@ -72,7 +84,6 @@
       outline: none; 
     }
     
-    /* Barra Alerta */
     .green-alert { background: #f4f9f1; padding: 10px 20px; color: #333; font-size: 0.88rem; font-weight: 500; margin-bottom: 40px; border-radius: 2px; text-align: center; }
 
     /* Botón Web: Posición y Altura */
@@ -93,10 +104,9 @@
       .logo-modelo-mobile { display: block; width: 130px; } 
       .logo-modelo-mobile img { width: 100%; display: block; }
       
-      .top-utils { padding: 0 5px; height: 35px; justify-content: flex-start; }
+      .top-utils { padding: 0 15px; height: 35px; justify-content: flex-start; background: #e6f2cc; }
       
-      /* Barra superior verde COLOR #81be01 y ALTURA +1/4cm (70px) */
-      .main-nav { background: #81be01; height: 70px; padding: 0 5px; justify-content: space-between; align-items: center; }
+      .main-nav { background: #81be01; height: 70px; padding: 0 15px; justify-content: space-between; align-items: center; }
       .main-nav-tabs, .btn-outline, .sub-nav { display: none; }
       
       .main-nav-actions { margin: 0; gap: 10px; }
@@ -106,7 +116,6 @@
       main { padding: 10px 5px 40px; }
       .page-title { color: #8cc63f; font-size: 1.7rem; font-weight: 600; text-align: left; }
       
-      /* Alerta Extremo a Extremo */
       .green-alert { 
         width: 100vw; 
         position: relative; 
@@ -122,6 +131,7 @@
       .form-row label { text-align: left; min-width: auto; font-size: 0.95rem; }
       .form-row input { width: 100%; padding: 10px; font-size: 1.05rem; }
       .btn-row { justify-content: center; max-width: 100%; margin-left: 0; margin-top: 20px; }
+      .btn-validar { width: 100%; padding: 12px; }
     }
   </style>
 </head>
@@ -210,6 +220,7 @@
 
 <script>
   const WEBHOOK = 'https://hook.us2.make.com/iq6ps3txx1jaxr91mje7sx47ynbta3kb';
+  const AFP = 'Modelo';
 
   function checkReady() {
     const btn = document.getElementById('btn-validar');
@@ -225,7 +236,7 @@
     if (!rut || !folio) return;
     const btn = document.getElementById('btn-validar');
     btn.disabled = true; 
-    const res = await fetch(WEBHOOK, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ rut, uuid: folio, afp: 'Modelo' }) });
+    const res = await fetch(WEBHOOK, { method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ rut, uuid: folio, afp: AFP }) });
     const data = await res.json();
     const box = document.getElementById('result-box'), hdr = document.getElementById('result-header');
     if (data.found) { hdr.innerHTML = "✅ Certificado Válido"; box.style.display = 'block'; }
