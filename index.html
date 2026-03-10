@@ -25,7 +25,7 @@
     .top-utils .left-util { display: flex; align-items: center; gap: 6px; }
     .top-utils .chat-icon { color: #8cc63f; font-size: 1rem; }
 
-    /* ── MAIN NAV (PC) ── */
+    /* ── MAIN NAV (Barra Negra) ── */
     .main-nav { background: #111; height: 72px; display: flex; align-items: stretch; padding: 0 40px; }
     
     .logo-modelo-desktop { display: flex; align-items: center; width: 145px; margin-right: auto; }
@@ -45,9 +45,11 @@
     /* ── SUB NAV ── */
     .sub-nav { background: #fff; border-bottom: 1px solid #eaeaea; height: 48px; display: flex; align-items: center; padding: 0 40px; gap: 25px; font-size: 0.82rem; }
     .sub-nav a { color: #555; text-decoration: none; font-weight: 500; }
+    .sub-nav .access { margin-left: auto; font-weight: 700; color: #333; }
 
     /* ── BREADCRUMB ── */
     .breadcrumb { padding: 30px 40px 10px; max-width: 1000px; margin: 0 auto; width: 100%; font-size: 0.8rem; color: #999; }
+    .breadcrumb a { color: #999; text-decoration: none; }
     .breadcrumb .current { color: #8cc63f; }
 
     /* ── MAIN CONTENT ── */
@@ -69,6 +71,7 @@
       outline: none; 
     }
     
+    /* Alerta verde */
     .green-alert { background: #f4f9f1; padding: 10px 20px; color: #333; font-size: 0.9rem; font-weight: 500; margin-bottom: 40px; border-radius: 2px; text-align: center; }
 
     /* Botón Validar PC */
@@ -79,27 +82,21 @@
     /* ── MOBILE RESPONSIVE ── */
     @media (max-width: 900px) {
       .logo-modelo-desktop { display: none; }
-      .logo-modelo-mobile { display: block; width: 125px; } 
+      .logo-modelo-mobile { display: block; width: 105px; } 
       .logo-modelo-mobile img { width: 100%; display: block; }
       
       .top-utils { padding: 0 5px; height: 35px; justify-content: flex-start; border-bottom: none; }
-      
-      /* Barra verde Mobile: +1/4 cm alto (70px) */
-      .main-nav { background: #8cc63f; height: 70px; padding: 0 5px; justify-content: space-between; align-items: center; }
+      .main-nav { background: #8cc63f; height: 60px; padding: 0 5px; justify-content: space-between; align-items: center; }
       .main-nav-tabs, .btn-outline, .sub-nav { display: none; }
       
       .main-nav-actions { margin: 0; gap: 8px; }
       .btn-solid { background: transparent; border: 1px solid #fff; color: #fff; padding: 5px 10px; }
       .hamburger { display: block; background: none; border: none; cursor: pointer; }
       
+      /* Márgenes Móvil Estrechos */
       main { padding: 10px 5px 40px; }
+      .page-title { color: #8cc63f; font-size: 1.8rem; font-weight: 600; text-align: left; }
       
-      /* Título Mobile: Centrado, Justificado y +25% Tamaño */
-      .page-title { color: #8cc63f; font-size: 2.125rem; font-weight: 600; text-align: center; text-align-last: center; margin-bottom: 20px; }
-      
-      /* Párrafo Mobile: Justificado, Centrado y +25% Tamaño */
-      .page-desc { font-size: 1.18rem; text-align: justify; text-align-last: center; line-height: 1.5; }
-
       /* Breadcrumb Móvil en Verde */
       .breadcrumb, .breadcrumb a, .breadcrumb .current { color: #8cc63f !important; }
       .breadcrumb { padding: 20px 5px 10px; }
@@ -114,7 +111,6 @@
         margin-right: -50vw; 
         border-radius: 0;
         padding: 29px 5px; 
-        font-size: 0.9rem;
       }
 
       .form-row { flex-direction: column; align-items: flex-start; gap: 6px; margin-bottom: 20px; }
@@ -133,8 +129,8 @@
   </div>
 
   <div class="main-nav">
-    <a href="#" class="logo-modelo-desktop"><img src="https://49659256.fs1.hubspotusercontent-na1.net/hubfs/49659256/PDFS/LOGOS%20AFP/LOGO%20MODELO.png" alt="PC"/></a>
-    <a href="#" class="logo-modelo-mobile"><img src="https://49659256.fs1.hubspotusercontent-na1.net/hubfs/49659256/PDFS/LOGOS%20AFP/LOGO_MODELO_MOBILE.jpeg" alt="Mobile"/></a>
+    <a href="#" class="logo-modelo-desktop"><img src="https://49659256.fs1.hubspotusercontent-na1.net/hubfs/49659256/PDFS/LOGOS%20AFP/LOGO%20MODELO.png" alt="AFP Modelo PC"/></a>
+    <a href="#" class="logo-modelo-mobile"><img src="https://49659256.fs1.hubspotusercontent-na1.net/hubfs/49659256/PDFS/LOGOS%20AFP/LOGO_MODELO_MOBILE.jpeg" alt="AFP Modelo Celular"/></a>
 
     <div class="main-nav-tabs">
       <a href="#">Afiliados</a>
@@ -165,7 +161,7 @@
 
 <main>
   <h1 class="page-title">Valida certificados de AFP Modelo</h1>
-  <p class="page-desc">Con esta herramienta puedes validar los certificados emitidos por AFP Modelo para usarlos en trámites financieros, como gestiones con entidades públicas o privadas, y en trámites personales como acreditar antecedentes para arriendos u otros fines.</p>
+  <p class="page-desc">Con esta herramienta puedes validar los certificados emitidos por AFP Modelo para usarlos en trámites financieros, como gestiones con entidades públicas o privadas.</p>
   
   <div class="green-alert">Si el certificado es válido, se descargará el archivo automáticamente.</div>
 
@@ -192,7 +188,7 @@
 <div class="footer-main">
   <div class="footer-inner">
     <div class="footer-brand"><img src="https://49659256.fs1.hubspotusercontent-na1.net/hubfs/49659256/PDFS/LOGOS%20AFP/LOGO%20MODELO.png" alt="AFP Modelo" style="height:40px;"/></div>
-    <p class="footer-legal">&copy; 2026 AFP Modelo. Todos los Derechos Reservados. La rentabilidad es variable, por lo que nada garantiza que las rentabilidades pasadas se repitan en el futuro.</p>
+    <p class="footer-legal">&copy; 2026 AFP Modelo. Todos los Derechos Reservados.</p>
   </div>
 </div>
 
@@ -201,7 +197,9 @@
 
   function checkReady() {
     const btn = document.getElementById('btn-validar');
-    if (document.getElementById('rut').value.trim() && document.getElementById('folio').value.trim()) { btn.classList.add('ready'); btn.disabled = false; }
+    const rut = document.getElementById('rut').value.trim();
+    const folio = document.getElementById('folio').value.trim();
+    if (rut && folio) { btn.classList.add('ready'); btn.disabled = false; }
     else { btn.classList.remove('ready'); btn.disabled = true; }
   }
 
