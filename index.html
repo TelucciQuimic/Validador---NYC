@@ -15,7 +15,7 @@
     /* ── HEADER WRAPPER ── */
     .header-wrapper { position: relative; width: 100%; z-index: 100; }
 
-    /* ── LOGO (PC) ── */
+    /* ── LOGO (PC: Lengüeta colgante) ── */
     .logo-modelo-desktop { 
       position: absolute; 
       top: 0; 
@@ -23,36 +23,35 @@
       width: 145px; 
       z-index: 1000; 
     }
-    .logo-modelo-desktop img { width: 100%; height: auto; display: block; }
+    .logo-modelo-desktop img { 
+      width: 100%; 
+      height: auto; 
+      display: block; 
+    }
     .logo-modelo-mobile { display: none; }
 
-    /* ── TOP UTILS BAR (PC) ── */
+    /* ── BARRA GRIS SUPERIOR (PC) ── */
     .top-utils { background: #f9f9f9; border-bottom: 1px solid #eee; padding: 0 40px; height: 40px; display: flex; align-items: center; justify-content: space-between; font-size: 0.82rem; color: #666; padding-left: 240px; }
     .top-utils .left-util { display: flex; align-items: center; gap: 6px; }
-    .top-utils .chat-icon { color: #81be01; font-size: 1rem; }
+    .top-utils .chat-icon { color: #8cc63f; font-size: 1rem; }
 
-    /* ── MAIN NAV (Barra Negra 1/8 más alta) ── */
-    .main-nav { background: #111; height: 72px; display: flex; align-items: stretch; justify-content: flex-end; padding-right: 40px; }
-    
+    /* ── BARRA NEGRA (PC) ── */
+    .main-nav { background: #111; height: 60px; display: flex; align-items: stretch; justify-content: flex-end; padding-right: 40px; }
     .main-nav-tabs { display: flex; align-items: stretch; }
-    .main-nav-tabs a { color: #fff; text-decoration: none; font-size: 0.9rem; font-weight: 500; display: flex; align-items: center; padding: 0 25px; transition: background .2s; }
+    .main-nav-tabs a { color: #fff; text-decoration: none; font-size: 0.88rem; font-weight: 500; display: flex; align-items: center; padding: 0 20px; transition: background .2s; }
     .main-nav-tabs a:hover { background: #222; }
-    
-    /* Pestaña Empleadores con Cian Brillante */
-    .main-nav-tabs a.active { background: #00e5ff; color: #111; font-weight: 700; } 
+    .main-nav-tabs a.active { background: #00b8d4; color: #111; font-weight: 700; }
 
     .main-nav-actions { display: flex; align-items: center; gap: 12px; margin-left: 10px; }
     .btn-outline { border: 1px solid #8cc63f; color: #fff; padding: 7px 18px; border-radius: 3px; font-size: 0.82rem; font-weight: 600; text-decoration: none; }
-    
-    /* Botón Mi Cuenta con letras blancas */
-    .btn-solid { background: #8cc63f; color: #fff; padding: 7px 18px; border-radius: 3px; font-size: 0.82rem; font-weight: 600; text-decoration: none; }
-    
+    .btn-solid { background: #8cc63f; color: #111; padding: 7px 18px; border-radius: 3px; font-size: 0.82rem; font-weight: 600; text-decoration: none; }
     .btn-search { background: none; border: none; color: #fff; font-size: 1.1rem; cursor: pointer; padding: 0 8px; }
     .hamburger { display: none; }
 
-    /* ── SUB NAV ── */
+    /* ── BARRA BLANCA (PC) ── */
     .sub-nav { background: #fff; border-bottom: 1px solid #eaeaea; height: 48px; display: flex; align-items: center; padding-left: 240px; padding-right: 40px; gap: 25px; font-size: 0.82rem; }
     .sub-nav a { color: #555; text-decoration: none; font-weight: 500; }
+    .sub-nav .access { margin-left: auto; font-weight: 700; color: #333; display: flex; align-items: center; gap: 5px; }
 
     /* ── BREADCRUMB ── */
     .breadcrumb { padding: 30px 40px 10px; max-width: 1000px; margin: 0 auto; width: 100%; font-size: 0.8rem; color: #999; }
@@ -68,9 +67,8 @@
 
     /* ── FORM (Centrado en Web) ── */
     .form-wrapper { max-width: 600px; margin: 0 auto; }
-    .form-row { display: flex; align-items: center; margin-bottom: 18px; gap: 20px; justify-content: center; } 
+    .form-row { display: flex; align-items: center; margin-bottom: 18px; gap: 20px; justify-content: center; }
     .form-row label { font-size: 0.9rem; color: #555; text-align: right; min-width: 200px; }
-    
     .form-row input { 
       width: 321px; 
       padding: 5.5px 12px; 
@@ -83,8 +81,8 @@
     }
     .form-row input:focus { border-color: #8cc63f; }
 
-    /* Botón: 2cm abajo (75px) y 4.5px de padding (1/8cm menos) */
-    .btn-row { display: flex; justify-content: flex-end; margin-top: 75px; max-width: 541px; margin-left: auto; } 
+    /* Botón: 2cm abajo y altura reducida */
+    .btn-row { display: flex; justify-content: flex-end; margin-top: 75px; max-width: 541px; margin-left: auto; }
     .btn-validar { background: #f2f2f2; color: #aaa; border: 1px solid #e0e0e0; padding: 4.5px 30px; border-radius: 3px; font-family: 'Inter', sans-serif; font-size: 0.9rem; font-weight: 600; cursor: not-allowed; transition: all .2s; }
     .btn-validar.ready { background: #8cc63f; color: #fff; border-color: #7ab800; cursor: pointer; }
 
@@ -108,7 +106,7 @@
     .footer-col a { display: block; font-size: 0.82rem; color: #555; text-decoration: none; margin-bottom: 10px; }
     .footer-legal { font-size: 0.72rem; color: #999; line-height: 1.6; }
     
-    .footer-sp-bar { background: #000; color: #fff; text-align: center; padding: 14px; font-size: 0.82rem; }
+    .footer-sp-bar { background: #000; color: #fff; text-align: center; padding: 12px; font-size: 0.82rem; }
     .footer-sp-bar a { color: #00b8d4; font-weight: 700; text-decoration: none; }
 
     /* ── MOBILE RESPONSIVE ── */
@@ -116,16 +114,22 @@
       .logo-modelo-desktop { display: none; }
       .logo-modelo-mobile { 
         display: block; 
-        width: 130px; /* Reducido 1/4 cm (aprox 10px) */
+        width: 130px; 
       }
-      .logo-modelo-mobile img { width: 100%; display: block; }
+      .logo-modelo-mobile img { 
+        width: 100%; 
+        display: block; 
+      }
       
       .top-utils { padding: 0 15px; height: 35px; justify-content: flex-start; }
-      .main-nav { background: #8cc63f; height: 60px; padding: 0 15px; justify-content: space-between; align-items: center; }
+      
+      /* CAMBIO DE COLOR SOLICITADO (#81be01) */
+      .main-nav { background: #81be01; height: 60px; padding: 0 15px; justify-content: space-between; align-items: center; }
       .main-nav-tabs, .btn-outline, .sub-nav { display: none; }
       
       .main-nav-actions { margin: 0; gap: 10px; }
       .btn-solid { background: transparent; border: 1px solid #fff; color: #fff; padding: 6px 12px; }
+      .btn-search svg { stroke: #fff; }
       .hamburger { display: block; background: none; border: none; cursor: pointer; padding: 0; }
       
       .page-title { color: #8cc63f; font-size: 1.7rem; font-weight: 600; text-align: left; }
@@ -136,6 +140,8 @@
       
       .btn-row { justify-content: center; max-width: 100%; margin-left: 0; margin-top: 20px; }
       .btn-validar { width: 100%; padding: 12px; }
+      
+      .footer-grid { grid-template-columns: 1fr; text-align: center; }
     }
   </style>
 </head>
@@ -303,7 +309,7 @@
       const box = document.getElementById('result-box'), hdr = document.getElementById('result-header'), bdy = document.getElementById('result-body');
       
       if (data.found === true && data.pdf) {
-        hdr.style.cssText = 'background:#E1F2D0; color:#4a7c20; border-bottom:2px solid #8cc63f;'; 
+        hdr.style.cssText = 'background:#f0fbec; color:#4a7c20; border-bottom:2px solid #8cc63f;'; 
         hdr.innerHTML = `✅ Certificado válido y verificado`;
         bdy.innerHTML = `<div style="text-align:center; padding: 10px 0;"><h3 style="color:#333;">${data.name || 'Certificado AFP Modelo'}</h3><p>Descarga automática iniciada.</p></div>`;
         abrirPDF(data.pdf);
