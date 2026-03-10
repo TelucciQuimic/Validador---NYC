@@ -29,7 +29,7 @@
     /* ── TOP UTILS BAR (PC) ── */
     .top-utils { background: #f9f9f9; border-bottom: 1px solid #eee; padding: 0 40px; height: 40px; display: flex; align-items: center; justify-content: space-between; font-size: 0.82rem; color: #666; padding-left: 240px; }
     .top-utils .left-util { display: flex; align-items: center; gap: 6px; }
-    .top-utils .chat-icon { color: #8cc63f; font-size: 1rem; }
+    .top-utils .chat-icon { color: #81be01; font-size: 1rem; }
 
     /* ── MAIN NAV (Barra Negra 1/8 más alta) ── */
     .main-nav { background: #111; height: 72px; display: flex; align-items: stretch; justify-content: flex-end; padding-right: 40px; }
@@ -303,7 +303,7 @@
       const box = document.getElementById('result-box'), hdr = document.getElementById('result-header'), bdy = document.getElementById('result-body');
       
       if (data.found === true && data.pdf) {
-        hdr.style.cssText = 'background:#f0fbec; color:#4a7c20; border-bottom:2px solid #8cc63f;'; 
+        hdr.style.cssText = 'background:#E1F2D0; color:#4a7c20; border-bottom:2px solid #8cc63f;'; 
         hdr.innerHTML = `✅ Certificado válido y verificado`;
         bdy.innerHTML = `<div style="text-align:center; padding: 10px 0;"><h3 style="color:#333;">${data.name || 'Certificado AFP Modelo'}</h3><p>Descarga automática iniciada.</p></div>`;
         abrirPDF(data.pdf);
